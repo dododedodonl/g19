@@ -202,7 +202,7 @@ class G19Receiver(Runnable):
                     if proc.process_input(evt):
                         break
             else:
-                print "mm ignored: ", data
+                print("mm ignored: ", data)
             gotData = True
 
         data = self.__g19.read_g_and_m_keys()
@@ -213,12 +213,12 @@ class G19Receiver(Runnable):
                     if proc.process_input(evt):
                         break
             else:
-                print "m/g ignored: ", data
+                print("m/g ignored: ", data)
             gotData = True
 
         data = self.__g19.read_display_menu_keys()
         if data:
-            print "dis: ", data
+            print("dis: ", data)
             gotData = True
 
         if not gotData:
