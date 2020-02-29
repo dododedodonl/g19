@@ -1,0 +1,184 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module logitech.g19</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="logitech.html"><font color="#ffffff">logitech</font></a>.g19</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/henk/Developing/zpython/g19/logitech/g19.py">/home/henk/Developing/zpython/g19/logitech/g19.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PIL.Image.html">PIL.Image</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="threading.html">threading</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="usb.html">usb</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="logitech.g19.html#G19">G19</a>
+</font></dt><dt><font face="helvetica, arial"><a href="logitech.g19.html#G19UsbController">G19UsbController</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="G19">class <strong>G19</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Simple&nbsp;access&nbsp;to&nbsp;Logitech&nbsp;<a href="#G19">G19</a>&nbsp;features.<br>
+&nbsp;<br>
+All&nbsp;methods&nbsp;are&nbsp;thread-safe&nbsp;if&nbsp;not&nbsp;denoted&nbsp;otherwise.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="G19-__init__"><strong>__init__</strong></a>(self, resetOnStart<font color="#909090">=False</font>)</dt><dd><tt>Initializes&nbsp;and&nbsp;opens&nbsp;the&nbsp;USB&nbsp;device.</tt></dd></dl>
+
+<dl><dt><a name="G19-add_applet"><strong>add_applet</strong></a>(self, applet)</dt><dd><tt>Starts&nbsp;an&nbsp;applet.</tt></dd></dl>
+
+<dl><dt><a name="G19-fill_display_with_color"><strong>fill_display_with_color</strong></a>(self, r, g, b)</dt><dd><tt>Fills&nbsp;display&nbsp;with&nbsp;given&nbsp;color.</tt></dd></dl>
+
+<dl><dt><a name="G19-load_image"><strong>load_image</strong></a>(self, filename)</dt><dd><tt>Loads&nbsp;image&nbsp;from&nbsp;given&nbsp;file.<br>
+&nbsp;<br>
+Format&nbsp;will&nbsp;be&nbsp;auto-detected.&nbsp;&nbsp;If&nbsp;neccessary,&nbsp;the&nbsp;image&nbsp;will&nbsp;be&nbsp;resized<br>
+to&nbsp;320x240.</tt></dd></dl>
+
+<dl><dt><a name="G19-read_display_menu_keys"><strong>read_display_menu_keys</strong></a>(self)</dt><dd><tt>Reads&nbsp;interrupt&nbsp;data&nbsp;from&nbsp;display&nbsp;keys.<br>
+&nbsp;<br>
+@return&nbsp;Read&nbsp;data&nbsp;or&nbsp;empty&nbsp;list.</tt></dd></dl>
+
+<dl><dt><a name="G19-read_g_and_m_keys"><strong>read_g_and_m_keys</strong></a>(self, maxLen<font color="#909090">=20</font>)</dt><dd><tt>Reads&nbsp;interrupt&nbsp;data&nbsp;from&nbsp;G,&nbsp;M&nbsp;and&nbsp;light&nbsp;switch&nbsp;keys.<br>
+&nbsp;<br>
+@return&nbsp;maxLen&nbsp;Maximum&nbsp;number&nbsp;of&nbsp;bytes&nbsp;to&nbsp;read.<br>
+@return&nbsp;Read&nbsp;data&nbsp;or&nbsp;empty&nbsp;list.</tt></dd></dl>
+
+<dl><dt><a name="G19-read_multimedia_keys"><strong>read_multimedia_keys</strong></a>(self)</dt><dd><tt>Reads&nbsp;interrupt&nbsp;data&nbsp;from&nbsp;multimedia&nbsp;keys.<br>
+&nbsp;<br>
+@return&nbsp;Read&nbsp;data&nbsp;or&nbsp;empty&nbsp;list.</tt></dd></dl>
+
+<dl><dt><a name="G19-reset"><strong>reset</strong></a>(self)</dt><dd><tt>Initiates&nbsp;a&nbsp;bus&nbsp;reset&nbsp;to&nbsp;USB&nbsp;device.</tt></dd></dl>
+
+<dl><dt><a name="G19-save_default_bg_color"><strong>save_default_bg_color</strong></a>(self, r, g, b)</dt><dd><tt>This&nbsp;stores&nbsp;given&nbsp;color&nbsp;permanently&nbsp;to&nbsp;keyboard.<br>
+&nbsp;<br>
+After&nbsp;a&nbsp;reset&nbsp;this&nbsp;will&nbsp;be&nbsp;color&nbsp;used&nbsp;by&nbsp;default.</tt></dd></dl>
+
+<dl><dt><a name="G19-send_frame"><strong>send_frame</strong></a>(self, data)</dt><dd><tt>Sends&nbsp;a&nbsp;frame&nbsp;to&nbsp;display.<br>
+&nbsp;<br>
+@param&nbsp;data&nbsp;320x240x2&nbsp;bytes,&nbsp;containing&nbsp;the&nbsp;frame&nbsp;in&nbsp;little-endian<br>
+16bit&nbsp;highcolor&nbsp;(5-6-5)&nbsp;format.<br>
+Image&nbsp;must&nbsp;be&nbsp;row-wise,&nbsp;starting&nbsp;at&nbsp;upper&nbsp;left&nbsp;corner&nbsp;and&nbsp;ending&nbsp;at<br>
+lower&nbsp;right.&nbsp;&nbsp;This&nbsp;means&nbsp;(data[0],&nbsp;data[1])&nbsp;is&nbsp;the&nbsp;first&nbsp;pixel&nbsp;and<br>
+(data[239&nbsp;*&nbsp;2],&nbsp;data[239&nbsp;*&nbsp;2&nbsp;+&nbsp;1])&nbsp;the&nbsp;lower&nbsp;left&nbsp;one.</tt></dd></dl>
+
+<dl><dt><a name="G19-set_bg_color"><strong>set_bg_color</strong></a>(self, r, g, b)</dt><dd><tt>Sets&nbsp;backlight&nbsp;to&nbsp;given&nbsp;color.</tt></dd></dl>
+
+<dl><dt><a name="G19-set_display_brightness"><strong>set_display_brightness</strong></a>(self, val)</dt><dd><tt>Sets&nbsp;display&nbsp;brightness.<br>
+&nbsp;<br>
+@param&nbsp;val&nbsp;in&nbsp;[0,100]&nbsp;(off..maximum).</tt></dd></dl>
+
+<dl><dt><a name="G19-set_display_colorful"><strong>set_display_colorful</strong></a>(self)</dt><dd><tt>This&nbsp;is&nbsp;an&nbsp;example&nbsp;how&nbsp;to&nbsp;create&nbsp;an&nbsp;image&nbsp;having&nbsp;a&nbsp;green&nbsp;to&nbsp;red<br>
+transition&nbsp;from&nbsp;left&nbsp;to&nbsp;right&nbsp;and&nbsp;a&nbsp;black&nbsp;to&nbsp;blue&nbsp;from&nbsp;top&nbsp;to&nbsp;bottom.</tt></dd></dl>
+
+<dl><dt><a name="G19-set_enabled_m_keys"><strong>set_enabled_m_keys</strong></a>(self, keys)</dt><dd><tt>Sets&nbsp;currently&nbsp;lit&nbsp;keys&nbsp;as&nbsp;an&nbsp;OR-combination&nbsp;of&nbsp;LIGHT_KEY_M1..3,R.<br>
+&nbsp;<br>
+example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;logitech.g19_keys&nbsp;import&nbsp;Data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lg19&nbsp;=&nbsp;<a href="#G19">G19</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lg19.<a href="#G19-set_enabled_m_keys">set_enabled_m_keys</a>(Data.LIGHT_KEY_M1&nbsp;|&nbsp;Data.LIGHT_KEY_MR)</tt></dd></dl>
+
+<dl><dt><a name="G19-start_event_handling"><strong>start_event_handling</strong></a>(self)</dt><dd><tt>Start&nbsp;event&nbsp;processing&nbsp;(aka&nbsp;keyboard&nbsp;driver).<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;is&nbsp;NOT&nbsp;thread-safe.</tt></dd></dl>
+
+<dl><dt><a name="G19-stop_event_handling"><strong>stop_event_handling</strong></a>(self)</dt><dd><tt>Stops&nbsp;event&nbsp;processing&nbsp;(aka&nbsp;keyboard&nbsp;driver).<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;is&nbsp;NOT&nbsp;thread-safe.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="G19-convert_image_to_frame"><strong>convert_image_to_frame</strong></a>(filename)</dt><dd><tt>Loads&nbsp;image&nbsp;from&nbsp;given&nbsp;file.<br>
+&nbsp;<br>
+Format&nbsp;will&nbsp;be&nbsp;auto-detected.&nbsp;&nbsp;If&nbsp;neccessary,&nbsp;the&nbsp;image&nbsp;will&nbsp;be&nbsp;resized<br>
+to&nbsp;320x240.<br>
+&nbsp;<br>
+@return&nbsp;Frame&nbsp;data&nbsp;to&nbsp;be&nbsp;used&nbsp;with&nbsp;<a href="#G19-send_frame">send_frame</a>().</tt></dd></dl>
+
+<dl><dt><a name="G19-rgb_to_uint16"><strong>rgb_to_uint16</strong></a>(r, g, b)</dt><dd><tt>Converts&nbsp;a&nbsp;RGB&nbsp;value&nbsp;to&nbsp;16bit&nbsp;highcolor&nbsp;(5-6-5).<br>
+&nbsp;<br>
+@return&nbsp;16bit&nbsp;highcolor&nbsp;value&nbsp;in&nbsp;little-endian.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="G19UsbController">class <strong>G19UsbController</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Controller&nbsp;for&nbsp;accessing&nbsp;the&nbsp;<a href="#G19">G19</a>&nbsp;USB&nbsp;device.<br>
+&nbsp;<br>
+The&nbsp;<a href="#G19">G19</a>&nbsp;consists&nbsp;of&nbsp;two&nbsp;composite&nbsp;USB&nbsp;devices:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;046d:c228<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;keyboard&nbsp;consisting&nbsp;of&nbsp;two&nbsp;interfaces:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MI00:&nbsp;keyboard<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EP&nbsp;0x81(in)&nbsp;&nbsp;-&nbsp;INT&nbsp;the&nbsp;keyboard&nbsp;itself<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MI01:&nbsp;(ifacMM)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EP&nbsp;0x82(in)&nbsp;&nbsp;-&nbsp;multimedia&nbsp;keys,&nbsp;incl.&nbsp;scroll&nbsp;and&nbsp;Winkey-switch<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;046d:c229<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LCD&nbsp;display&nbsp;with&nbsp;two&nbsp;interfaces:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MI00&nbsp;(0x05):&nbsp;(iface0)&nbsp;via&nbsp;control&nbsp;data&nbsp;in:&nbsp;display&nbsp;keys<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EP&nbsp;0x81(in)&nbsp;&nbsp;-&nbsp;INT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EP&nbsp;0x02(out)&nbsp;-&nbsp;BULK&nbsp;display&nbsp;itself<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MI01&nbsp;(0x06):&nbsp;(iface1)&nbsp;backlight<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EP&nbsp;0x83(in)&nbsp;&nbsp;-&nbsp;INT&nbsp;G-keys,&nbsp;M1..3/MR&nbsp;key,&nbsp;light&nbsp;key<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="G19UsbController-__init__"><strong>__init__</strong></a>(self, resetOnStart<font color="#909090">=False</font>)</dt></dl>
+
+<dl><dt><a name="G19UsbController-reset"><strong>reset</strong></a>(self)</dt><dd><tt>Resets&nbsp;the&nbsp;device&nbsp;on&nbsp;the&nbsp;USB.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+</td></tr></table>
+</body></html>
